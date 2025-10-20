@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <meta charset="UTF-8">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .header{
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          font-size: 20px;
+          width: 10%;
+          position: fixed;
+          right: 0;
+          top: 15px;
+        }
+        body{
+          font-family: Monaco, "Lucida Console", monospace;
+          min-height: 100vh;
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+          background-color: rgb(250, 240, 230);
+          margin: auto;
+          background-image: url("carpets.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .font-effect-outline {
+          color: Tomato;
+        }
+        #main {
+          position: fixed;
+          top: 5%;
+          left: 5%;
+          flex: 70%;
+          color: Tomato;
+          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+        }
+        .navbar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: rgb(49, 19, 2, 0.8);
+        }
+        .navbar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .navbar a:hover{
+          color: White;
+        }
+        .navbar .closebtn {
+          position: absolute;
+          top:0;
+          right: 25px;
+          font-size:36px;
+          margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+          .navbar {padding-top: 15px;}
+          .navbar a {font-size: 18px;}
+        }
+        .container {
+          padding: 100px 75px;
+        }
+        #myImg {
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        #myImg:hover {
+          opacity: 0.7;
+        }
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+        .modal-content {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+        }
+        #caption {
+          margin: auto;
+          display: block;
+          width: 80%;
+          max-width: 700px;
+          text-align: center;
+          color: #ccc;
+          padding: 10px 0;
+          height: 150px;
+        }
+        .modal-content, #caption {
+          animation-name: zoom;
+          animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+          from {transform:scale(0)}
+          to {transform:scale(1)}
+        }
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        @media only screen and (max-width: 700px){
+          .modal-content {
+            width: 100%;
+          }
+        }
+        .title {
+          position: fixed;
+          z-index: 1;
+          bottom: 100px;
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          font-size: 18px;
+          float: left;
+        }
+        .footer {
+          z-index: 2;
+          color: Tomato;
+          font-size: 10px;
+          padding: 20px;
+          text-align: left;
+          background-color: rgb(49, 19, 2);
+        }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1 class="font-effect-outline">Rachel Hayward</h1>
+    <div class="back">
+    <a href="WorkExamples.html" style="color: Tomato; margin: 10px 30px;" class="font-effect-outline">Back</a>
+</div>
+</div>
+<div id="overlay" class="font-effect-outline">
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+    </span>
+  </div>
+<div id="myNavbar" class="navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="HomePage.html">Home</a>
+    <a href="Resume.html">Resume</a>
+    <a href="WorkExamples.html">Examples</a>
+    <a href="Contact.html">Contact</a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNavbar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "-5000px";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+
+function closeNav() {
+  document.getElementById("myNavbar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+</script>
+</div>
+<div class="container">
+    <img id="myImg" src="" alt="Coming Soon" style="width:100%;max-width:300px">
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+</div>
+<div class="title">
+    <h2 class="font-effect-outline" style="padding:27.5px 0px;">Research</h2>
+</div>
+<div class="footer">
+  <h2>&copy; 2025 Rachel Hayward</h2>
+    <h3>All photos liscensed through <a href="https://www.hovhann.com/" style="color:tomato;">Dea Hovhannsiyan</a></h3>
+</div>
+</body>
+</html>

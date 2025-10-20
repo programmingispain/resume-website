@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <meta charset="UTF-8">
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        .header {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 20px;
+        width: 10%;
+        position: fixed;
+        right: 0;
+        top: 15px;
+        }
+        body{
+        font-family: Monaco, "Lucida Console", monospace;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        background-color: rgb(250, 240, 230);
+        margin: auto;
+        }
+        .font-effect-outline {
+        color: Tomato;
+        }
+        #main {
+        position: fixed;
+        top: 5%;
+        left: 5%;
+        flex: 70%;
+        color: Tomato;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        }
+        .navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        background-color: rgb(49, 19, 2, 0.8);
+        }
+        .navbar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: Tomato;
+        display: block;
+        transition: 0.3s;
+        }
+        .navbar a:hover{
+        color: White;
+        }
+        .navbar .closebtn {
+        position: absolute;
+        top:0;
+        right: 25px;
+        font-size:36px;
+        margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+        .navbar {padding-top: 15px;}
+        .navbar a {font-size: 18px;}
+        }
+        .container {
+        width:90%;
+        padding: 10px;
+        }
+        .code {
+        margin: auto;
+        width: 50%;
+        padding: 5px;
+        position: relative;
+        background-image: url("facade.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 33%;
+        }
+        .code a {
+        text-align: center;
+        position: relative;
+        top: 40%;
+        text-decoration: none;
+        font-size: 30px;
+        color: Tomato;
+        display: block;
+        transition: 0.3s;
+        }
+        .code a:link, a:visited {
+        background-color: rgb(49, 19, 2, 0.3);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        }
+        .code a:hover, a:active {
+        color: white;
+        background-color: rgb(49, 19, 2, 0.6);
+        }
+        .research {
+        width: 50%;
+        padding: 5px;
+        position: relative;
+        background-image: url("carpets.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 33%;
+        margin: auto;
+        }
+        .research a {
+        text-align: center;
+        position: relative;
+        top: 40%;
+        text-decoration: none;
+        font-size: 30px;
+        color: Tomato;
+        transition: 0.3s;
+        display: block;
+        }
+        .research a:link, a:visited {
+        background-color: rgb(49, 19, 2, 0.3);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        }
+        .research a:hover, a:active {
+        color: white;
+        background-color: rgb(49, 19, 2, 0.6);
+        }
+        .other {
+        width: 50%;
+        padding: 5px;
+        position: relative;
+        background-image: url("qrchi+bazaar+2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 33%;
+        margin: auto;
+        }
+        .other a {
+        text-align: center;
+        position: relative;
+        top: 40%;
+        text-decoration: none;
+        font-size: 30px;
+        color: Tomato;
+        transition: 0.3s;
+        display: block;
+        }
+         .other a:link, a:visited {
+        background-color: rgb(49, 19, 2, 0.3);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        }
+        .other a:hover, a:active {
+        color: white;
+        background-color: rgb(49, 19, 2, 0.6);
+        }
+        .footer {
+        z-index: 2;
+        width: 100%;
+        color: Tomato;
+        font-size: 10px;
+        padding: 20px;
+        text-align: left;
+        background-color: rgb(49, 19, 2);
+        }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1 class="font-effect-outline">Rachel Hayward</h1>
+</div>
+<div id="overlay" class="font-effect-outline">
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+    </span>
+  </div>
+<div id="myNavbar" class="navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="WorkExamples.html">Examples</a>
+    <a href="AboutMe.html">About Me</a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNavbar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "-5000px";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+
+function closeNav() {
+  document.getElementById("myNavbar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+</script>
+</div>
+<div class="container">
+    <div class="code">
+        <a href="WorkExamples_Code.html">CODE</a>
+    </div>
+    <div class="research">
+        <a href="WorkExamples_ResearchPapers.html">RESEARCH</a>
+    </div>
+    <div class="other">
+        <a href="WorkExamples_Other.html">OTHER</a>
+    </div>
+</div>
+<div class="footer">
+  <h2>&copy; 2025 Rachel Hayward</h2>
+    <h3>All photos liscensed through <a href="url" style="color:tomato;">Dea Hovhannsiyan</a></h3>
+</div>
+</body>
+</html>
+/* RESUME
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+        body{
+        font-family: Monaco, "Lucida Console", monospace;
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        }
+        .font-effect-outline {
+        color: Tomato;
+        }
+        #main {
+        position: fixed;
+        top: 5%;
+        left: 5%;
+        flex: 70%;
+        color: Tomato;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        }
+        .navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        background-color: rgb(49, 19, 2, 0.8);
+        }
+        .navbar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: Tomato;
+        display: block;
+        transition: 0.3s;
+        }
+        .navbar a:hover{
+        color: White;
+        }
+        .navbar .closebtn {
+        position: absolute;
+        top:0;
+        right: 25px;
+        font-size:36px;
+        margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+        .navbar {padding-top: 15px;}
+        .navbar a {font-size: 18px;}
+        }
+        .row {
+        display: flex;
+        top: 35px;
+        }
+        .side {
+        flex: 25%;
+        padding: 200px 15px 5px;
+        background-color: rgb(250, 240, 230);
+        }
+        .skills {
+        flex: 65%;
+        padding: 200px 15px 5px;
+        }
+        .header {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 20px;
+        flex: 10%;
+        }
+        .footer {
+        z-index: 2;
+        color: Tomato;
+        font-size: 10px;
+        padding: 20px;
+        text-align: left;
+        background-color: rgb(49, 19, 2);
+        }
+    </style>
+</head>
+<body>
+<div id="overlay" class="font-effect-outline">
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+    </span>
+  </div>
+<div id="myNavbar" class="navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="LandingPage.html">Home</a>
+    <a href="WorkExamples.html">Examples</a>
+    <a href="AboutMe.html">About Me</a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNavbar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "-5000px";
+}
+
+function closeNav() {
+  document.getElementById("myNavbar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</div>
+<div class="row">
+  <div class="side">
+      <h3>Skills:</h3>
+        <p>Microsoft Office</p>
+        <p>Google Suite</p>
+        <p>R Studio</p>
+        <p>IBM SPSS AMOS</p>
+        <p>IBM SPSS Statistics</p>
+        <p>Python</p>
+        <p>HTML</p>
+        <p>Otree Studio</p>
+        <p>Stata</p>
+      <h3>Soft Skills</h3>
+        <p>Communication</p>
+        <p>Problem Solving</p>
+        <p>Academic and Legal writing</p>
+        <p>Critical thinking</p>
+        <p>Organization and Planning</p>
+      <h3>Languages</h3>
+        <p>English</p>
+        <p>German</p>
+        <p>Japanese</p>
+      <h3>Volunteering</h3>
+
+  </div>
+  <div class="skills">
+      <h3>Profile</h3>
+      <p>I am a lively person with excellent
+          communication skills and an inquisitive nature.
+          I work best when presented with a challenge,
+          and aim to balance innovative approaches with
+          traditional work practices. </p>
+      <h3>Education</h3>
+      <h4>Universitaet Kassel</h4>
+      <p>Masters of Science in Economic Behavior and Governance</p>
+      <h4>University of California, Davis</h4>
+      <p>Bachelor of the Arts in Economics with a
+          Focus in International Macro-Finance</p>
+      <h3>Experience</h3>
+  </div>
+  <div class="header" >
+      <h1 class="font-effect-outline" style="padding:25px 0px;">Rachel Hayward</h1>
+      <h2 class="font-effect-outline" style="padding:27.5px 0px;">Resume</h2>
+      <div class="back">
+          <a href="AboutMe.html" style="color: Tomato; margin: 30px 10px;" class="font-effect-outline">Back</a>
+      </div>
+  </div>
+</div>
+<div class="footer">
+  <h2 class="font-effect-outline">&copy; 2025 Rachel Hayward</h2>
+    <h3>All photos liscensed through <a href="url" style="color:tomato;">Dea Hovhannsiyan</a></h3>
+</div>
+
+</body>
+</html>
+*/
+/* WorkExamples */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <meta charset="UTF-8">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .header {
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          font-size: 20px;
+          width: 10%;
+          position: fixed;
+          right: 0;
+          top: 15px;
+        }
+        body{
+          font-family: Monaco, "Lucida Console", monospace;
+          min-height: 100vh;
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+          background-color: rgb(250, 240, 230);
+          margin: auto;
+        }
+          .font-effect-outline {
+          color: Tomato;
+        }
+        #main {
+          position: fixed;
+          top: 5%;
+          left: 5%;
+          flex: 70%;
+          color: Tomato;
+          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+        }
+        .navbar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: rgb(49, 19, 2, 0.8);
+        }
+        .navbar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .navbar a:hover{
+          color: White;
+        }
+        .navbar .closebtn {
+          position: absolute;
+          top:0;
+          right: 25px;
+          font-size:36px;
+          margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+          .navbar {padding-top: 15px;}
+          .navbar a {font-size: 18px;}
+        }
+        .code {
+          width: 50%;
+          position: relative;
+          background-image: url("facade.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 33%;
+          left:10%;
+          top: 10%;
+        }
+        .code a {
+          text-align: center;
+          position: relative;
+          top: 40%;
+          text-decoration: none;
+          font-size: 30px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .code a:link, a:visited {
+          background-color: rgb(49, 19, 2, 0.3);
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+        }
+        .code a:hover, a:active {
+          color: white;
+          background-color: rgb(49, 19, 2, 0.6);
+        }
+        .research {
+          width: 50%;
+          position: absolute;
+          background-image: url("carpets.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 33%;
+          left: 40%;
+          top: 40%;
+        }
+        .research a {
+          text-align: center;
+          position: relative;
+          top: 40%;
+          text-decoration: none;
+          font-size: 30px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .research a:link, a:visited {
+          background-color: rgb(49, 19, 2, 0.3);
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+        }
+        .research a:hover, a:active {
+          color: white;
+          background-color: rgb(49, 19, 2, 0.6);
+        }
+        .other {
+          width: 10%;
+          position: absolute;
+          background-image: url("qrchi+bazaar+2.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 80%;
+          left: 60%;
+          top: 10%;
+        }
+        .other a {
+          text-align: center;
+          position: relative;
+          top: 40%;
+          text-decoration: none;
+          font-size: 30px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .other a:link, a:visited {
+          background-color: rgb(49, 19, 2, 0.3);
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+        }
+        .other a:hover, a:active {
+          color: white;
+          background-color: rgb(49, 19, 2, 0.6);
+        }
+        .footer {
+          z-index: 2;
+          width: 100%;
+          color: Tomato;
+          font-size: 10px;
+          padding: 20px;
+          text-align: left;
+          background-color: rgb(49, 19, 2);
+        }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1 class="font-effect-outline">Rachel Hayward</h1>
+</div>
+<div id="overlay" class="font-effect-outline">
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+    </span>
+  </div>
+<div id="myNavbar" class="navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="LandingPage.html">Home</a>
+    <a href="WorkExamples.html">Examples</a>
+    <a href="AboutMe.html">About Me</a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNavbar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "-5000px";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+
+function closeNav() {
+  document.getElementById("myNavbar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+</script>
+</div>
+<div class="code">
+    <a href="WorkExamples_Code.html">CODE</a>
+</div>
+<div class="research">
+    <a href="WorkExamples_ResearchPapers.html">RESEARCH</a>
+</div>
+<div class="other">
+    <a href="WorkExamples_Other.html">OTHER</a>
+</div>
+<div class="footer">
+  <h2>&copy; 2025 Rachel Hayward</h2>
+    <h3>All photos licensed through <a href="url" style="color:tomato;">Dea Hovhannsiyan</a></h3>
+</div>
+</body>
+</html>

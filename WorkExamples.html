@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <meta charset="UTF-8">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .header {
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          font-size: 20px;
+          width: 10%;
+          position: fixed;
+          right: 0;
+          top: 15px;
+        }
+        body{
+          font-family: Monaco, "Lucida Console", monospace;
+          min-height: 100vh;
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+          background-color: rgb(250, 240, 230);
+          margin: auto;
+        }
+          .font-effect-outline {
+          color: Tomato;
+        }
+        #main {
+          position: fixed;
+          top: 5%;
+          left: 5%;
+          flex: 70%;
+          color: Tomato;
+          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+        }
+        .navbar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: rgb(49, 19, 2, 0.8);
+        }
+        .navbar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .navbar a:hover{
+          color: White;
+        }
+        .navbar .closebtn {
+          position: absolute;
+          top:0;
+          right: 25px;
+          font-size:36px;
+          margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+          .navbar {padding-top: 15px;}
+          .navbar a {font-size: 18px;}
+        }
+        #container{
+          display: grid;
+          grid-template-columns: auto auto auto;
+          z-index: 1;
+          margin: 75px 125px 35px 75px;
+          gap: 5px;
+        }
+        .code {
+          background-image: url("facade.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          grid-row-start: 1;
+          grid-row-end:3;
+          grid-column-start: 3;
+          grid-column-end: 4;
+          min-width: 125px;
+        }
+        .code a {
+          text-align: center;
+          position: relative;
+          top: 45%;
+          text-decoration: none;
+          font-size: 25px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .code a:hover, a:active {
+          color: white;
+        }
+        .research {
+          background-image: url("carpets.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          grid-row-start: 2;
+          grid-row-end:4;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          min-width: 125px;
+        }
+        .research a {
+          text-align: center;
+          position: relative;
+          top: 45%;
+          text-decoration: none;
+          font-size: 25px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+          padding: none;
+        }
+        .research a:hover, a:active {
+          color: white;
+        }
+        .other {
+          background-image: url("water.jpg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          grid-row-start: 3;
+          grid-row-end:5;
+          grid-column-start: 1;
+          grid-column-end: 2;
+          min-width: 125px;
+        }
+        .other a {
+          text-align: center;
+          position: relative;
+          top: 45%;
+          text-decoration: none;
+          font-size: 25px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .other a:hover, a:active {
+          color: white;
+        }
+        .footer {
+          z-index: 2;
+          width: 100%;
+          color: Tomato;
+          font-size: 10px;
+          padding: 20px;
+          text-align: left;
+          background-color: rgb(49, 19, 2);
+        }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1 class="font-effect-outline">RACHEL HAYWARD</h1>
+</div>
+<div id="overlay" class="font-effect-outline">
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+    </span>
+  </div>
+<div id="myNavbar" class="navbar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="LandingPage.html">Home</a>
+    <a href="WorkExamples.html">Examples</a>
+    <a href="AboutMe.html">About Me</a>
+</div>
+<script>
+function openNav() {
+  document.getElementById("myNavbar").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "-5000px";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+
+function closeNav() {
+  document.getElementById("myNavbar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "rgb(250, 240, 230)";
+}
+</script>
+</div>
+<div id="container" class="font-effect-outline">
+    <div></div>
+    <div></div>
+    <div class="code">
+    <a href="WorkExamples_Code.html">CODE</a>
+</div>
+    <div></div>
+    <div class="research">
+    <a href="WorkExamples_ResearchPapers.html">RESEARCH</a>
+</div>
+    <div></div>
+    <div class="other">
+    <a href="WorkExamples_Other.html">OTHER</a>
+</div>
+    <div></div>
+    <div></div>
+</div>
+<div class="footer">
+  <h2>&copy; 2025 Rachel Hayward</h2>
+    <h3>All photos licensed through <a href="https://www.hovhann.com/" style="color:tomato;">Dea Hovhannsiyan</a></h3>
+</div>
+</body>
+</html>
