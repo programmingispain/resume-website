@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body{
+          font-family: Monaco, "Lucida Console", monospace;
+          min-height: 100vh;
+          margin: 0;
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+          background-color: rgb(250, 240, 230);
+        }
+        .font-effect-outline {
+          color: Tomato;
+        }
+        #main {
+          position: fixed;
+          top: 5%;
+          left: 5%;
+          flex: 70%;
+          color: Tomato;
+          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+        }
+        .navbar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          background-color: rgb(49, 19, 2, 0.8);
+        }
+        .navbar a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: Tomato;
+          display: block;
+          transition: 0.3s;
+        }
+        .navbar a:hover{
+          color: White;
+        }
+        .navbar .closebtn {
+          position: absolute;
+          top:0;
+          right: 25px;
+          font-size:36px;
+          margin-left: 50px;
+        }
+        @media screen and (max-height: 450px) {
+          .navbar {padding-top: 15px;}
+          .navbar a {font-size: 18px;}
+        }
+        .row {
+          display: flex;
+          top: 35px;
+          background-image: url("kornidzor.jpg");
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        #contentBox{
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          padding: 5px;
+          background-color: rgb(0, 0, 0, 0.5);
+          z-index: 0;
+          margin: 75px 125px 35px 75px;
+        }
+        .leftSide{
+          width: 35%;
+          padding: 5px 5px;
+          background-color: rgb(250, 240, 230, 0.8);
+          display: inline-block;
+        }
+        .rightSide{
+          width: 65%;
+          padding: 5px 5px;
+          display: inline-block;
+          background-color: rgb(250, 240, 230, 0.5);
+        }
+        .header {
+          right: 0;
+          position: fixed;
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          font-size: 20px;
+          flex: 10%;
+        }
+        .title {
+          position: fixed;
+          z-index: 0;
+          bottom: 102px;
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          font-size: 18px;
+          float: left;
+        }
+        .footer {
+          z-index: 2;
+          color: Tomato;
+          font-size: 10px;
+          padding: 20px;
+          text-align: left;
+          background-color: rgb(49, 19, 2);
+          bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="overlay" class="font-effect-outline">
+    <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+    </span>
+  </div>
+    <div id="myNavbar" class="navbar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="WorkExamples.html">Examples</a>
+        <a href="AboutMe.html">About Me</a>
+    </div>
+    <script>
+    function openNav() {
+      document.getElementById("myNavbar").style.width = "200px";
+      document.getElementById("main").style.marginLeft = "-5000px";
+    }
+    function closeNav() {
+      document.getElementById("myNavbar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+    </script>
+</div>
+<div class="row">
+    <div id="contentBox">
+        <div class="leftSide">
+            <h3 class="font-effect-outline" style="color:black;">Profile</h3>
+            <p>I am a lively person with excellent
+              communication skills and an inquisitive nature.
+              I work best when presented with a challenge,
+              and aim to balance innovative approaches with
+              traditional work practices. </p>
+          <h3 class="font-effect-outline" style="color: black;">Skills:</h3>
+            <p>Microsoft Office</p>
+            <p>Google Suite</p>
+            <p>R Studio</p>
+            <p>IBM SPSS AMOS</p>
+            <p>IBM SPSS Statistics</p>
+            <p>Python</p>
+            <p>HTML</p>
+            <p>Otree Studio</p>
+            <p>Stata</p>
+          <h3 class="font-effect-outline" style="color:black;">Soft Skills</h3>
+            <p>Communication</p>
+            <p>Problem Solving</p>
+            <p>Academic and Legal writing</p>
+            <p>Critical thinking</p>
+            <p>Organization and Planning</p>
+          <h3 class="font-effect-outline" style="color:black;">Languages</h3>
+            <p>Mother Tongue(s): English</p>
+            <p>Other Language(s)</p>
+            <p>German</p>
+            <p>Japanese</p>
+            </div>
+        <div class="rightSide">
+          <h3 class="font-effect-outline" style="color:black;">Education</h3>
+          <h4>Universitaet Kassel</h4><p style="display:inline;">[10.21-present]</p>
+            <p>Masters of Science in Economic Behavior and Governance</p>
+          <h4>University of California, Davis</h4>
+            <p>Bachelor of the Arts in Economics with a
+              Focus in International Macro-Finance</p>
+          <h3 class="font-effect-outline" style="color:black;">Experience</h3>
+            <h4>Internationales Studium Zentrum</h4>
+            <p>City: Kassel | State: Hesse | Country: Deutschland</p>
+            <h5>Student Assistant</h5>
+            <p>[03.22-11.23]</p>
+            <p>•	Academic writing courses, sprachen er leben programme, other</p>
+            <p>•	Prepare and provide regular feedback for students, run workshops using relevant materials and subject</p>
+            <p>•	Design and deliver high quality events and materials for English language learners</p>
+            <p>•	Collaborate with other teachers/staff to provide appropriate support for students</p>
+            <p>•	Support various language teachers with administering lessons/ exams.</p>
+            <p>•	Proofreading and translation and digital media creation for website.</p>
+            <h4>OpenISP</h4>
+            <p>City: San Francisco | State: California | Country: USA</p>
+            <h5>Finance Consultant</h5>
+            <p>[02.21-10.21]</p>
+            <p>•	Evaluated project proposals and prepared cost analyses Maintained a high degree of flexibility and creativity in a start-up environment.</p>
+            <p>•	Provided detailed feedback and recommendations on business strategies and other related ventures.</p>
+            <h4>Title Nine Sports</h4>
+            <p>City: Palo Alto | State: California | Country: USA</p>
+            <h5>Sales Lead, formerly Sales Associate</h5>
+            <p>[10.14-10.17]</p>
+            <p>•	Maintained brand image and managed client expectations
+•	Coordinated with management to improve sales numbers and marketing. Supported corporate office with event planning.
+•	Used specific work scheme and kept administration documents to a high standard.
+</p>
+            <h4>Lone Star Legal and Copy Services</h4>
+            <p>City: San Francisco | State: California | Country: USA</p>
+            <h5>Document Researcher and Quality Assurance</h5>
+            <p>[05.12-04.14]</p>
+            <p>•	Held responsibility researching and digitizing sensitive legal and government documents. Maintained professionalism and accountability when coordinating with clients.
+</p>
+
+
+        </div>
+    </div>
+  <div class="header" >
+      <h1 class="font-effect-outline" style="padding:25px 0px;">RACHEL HAYWARD</h1>
+      <div class="back">
+          <a href="AboutMe.html" style="color: Tomato; margin: 30px 0px;" class="font-effect-outline">BACK</a>
+      </div>
+  </div>
+</div>
+<div class="title">
+    <h2 class="font-effect-outline">CURICULUM VITAE</h2>
+</div>
+<div class="footer">
+  <h2 class="font-effect-outline">&copy; 2025 Rachel Hayward</h2>
+    <h3>All photos liscensed through <a href="https://www.hovhann.com/" style="color:tomato;">Dea Hovhannsiyan</a></h3>
+</div>
+</body>
+</html>
