@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
         body{
@@ -33,10 +34,12 @@
         }
         .dropdown-content {
         display: none;
-        max-width: 425px;
+        width: 425px;
         margin: auto;
         overflow: auto;
         z-index: 2;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
         font-size: 20px;
         }
         .dropdown-content a {
