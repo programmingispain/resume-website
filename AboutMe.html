@@ -1,118 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        * {
-          box-sizing: border-box;
-        }
-        body{
-          font-family: Monaco, "Lucida Console", monospace;
-          min-height: 100vh;
-          margin: 0;
-          display: grid;
-          grid-template-rows: auto 1fr auto;
-          background-color: rgb(250, 240, 230);
-        }
-        .font-effect-outline {
-          color: Tomato;
-        }
-        #main {
-          position: fixed;
-          top: 5%;
-          left: 5%;
-          flex: 70%;
-          color: Tomato;
-          transform: translate(-50%,-50%);
-          -ms-transform: translate(-50%,-50%);
-        }
-        .navbar {
-          height: 100%;
-          width: 0;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          overflow-x: hidden;
-          transition: 0.5s;
-          padding-top: 60px;
-          background-color: rgb(49, 19, 2, 0.8);
-        }
-        .navbar a {
-          padding: 8px 8px 8px 32px;
-          text-decoration: none;
-          font-size: min(8vw, 24px);
-          color: Tomato;
-          display: block;
-          transition: 0.3s;
-        }
-        .navbar a:hover{
-          color: White;
-        }
-        .navbar .closebtn {
-          position: absolute;
-          top:0;
-          right: 25px;
-          font-size: 3.6vw;
-          margin-left: 50px;
-        }
-        @media screen and (max-height: 450px) {
-          .navbar {padding-top: 15px;}
-          .navbar a {font-size: 18px;}
-        }
-        .row {
-          display: flex;
-          top: 35px;
-          background-image: url("images/kornidzor.jpg");
-          height: 100%;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
-        .skills {
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-          padding: 5px;
-          background-color: rgb(0, 0, 0, 0.5);
-          z-index: 0;
-          margin-left: 10%;
-          margin-right: 18%;
-          margin-top: 10%;
-          margin-bottom: 10%;
-          font-size: min( 2.5vw, 12px);
-        }
-        .header {
-          right: 0;
-          position: fixed;
-          writing-mode: vertical-rl;
-          text-orientation: upright;
-          font-size: min(2.8vw, 21px);
-          flex: 10%;
-        }
-        .title {
-          position: fixed;
-          z-index: 0;
-          bottom: 102px;
-          writing-mode: vertical-rl;
-          text-orientation: upright;
-          font-size: min(2.3vw, 23px);
-          float: left;
-        }
-        .footer {
-          z-index: 2;
-          color: Tomato;
-          font-size: min(1.5vw, 10px);
-          padding: 20px;
-          text-align: left;
-          background-color: rgb(49, 19, 2);
-          bottom: 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div id="overlay" class="font-effect-outline">
@@ -137,8 +29,8 @@ function closeNav() {
 }
 </script>
 </div>
-<div class="row">
-  <div class="skills">
+<div class="bgAboutMe">
+  <div id="contentBox">
       <div class="imgContainer">
       <img src="Headshot.png" alt="Headshot" style="width:175px;height:200px;">
       </div>
