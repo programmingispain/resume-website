@@ -104,6 +104,7 @@
           max-width: 425px;
           max-height: 25vh;
           margin: auto;
+          overflow: auto;
           overflow-wrap: anywhere;
           z-index: 2;
           writing-mode: vertical-rl;
