@@ -104,8 +104,7 @@
           max-width: 425px;
           max-height: 25vh;
           margin: auto;
-          overflow: auto;
-          overflow-wrap: anywhere;
+
           z-index: 2;
           writing-mode: vertical-rl;
           text-orientation: upright;
@@ -116,6 +115,9 @@
           padding: 12px 16px;
           text-decoration: none;
           display: flex;
+          overflow: auto;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
         .dropdown a:hover {
           color: white;
